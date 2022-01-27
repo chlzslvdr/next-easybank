@@ -1,0 +1,26 @@
+// COLORS
+
+// primary
+$color-primary-dblue: hsl(233, 26%, 24%);
+$color-primary-lgreen: hsl(136, 65%, 51%);
+$color-primary-bcyan: hsl(192, 70%, 51%);
+
+// neutral
+$color-neutral-gblue: hsl(233, 8%, 62%);
+$color-neutral-lgblue: hsl(220, 16%, 96%);
+$color-neutral-vlgray: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+
+// FONTS
+$default-font-size: 1.8rem;
+
+:export {
+  primaryBlueColor: $color-primary-dblue;
+  primaryGreenColor: $color-primary-lgreen;
+  primaryCyanColor: $color-primary-bcyan;
+
+  neutralGrayishBlueColor: $color-neutral-gblue;
+  neutralLightGrayishBlueColor: $color-neutral-lgblue;
+  neutralVeryLightGrayColor: $color-neutral-vlgray;
+  neutralWhiteColor: $white;
+}
