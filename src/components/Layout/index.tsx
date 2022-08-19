@@ -1,8 +1,7 @@
 import { Fragment } from "react";
-import type { NextPage } from "next";
 import Header from "./Header/Header";
 
-const Layout: NextPage = ({ children }) => {
+const Layout = ({ children }: any) => {
   return (
     <Fragment>
       <Header />

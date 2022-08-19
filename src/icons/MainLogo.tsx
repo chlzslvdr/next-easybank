@@ -22,7 +22,7 @@ export const MainLogo = () => (
   </svg>
 );
 
-export const MainLogoProps = ({ color }) => (
+export const MainLogoProps = ({ color }: any) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="139" height="20" fill={color}>
     <defs>
       <linearGradient id="a" x1="72.195%" x2="17.503%" y1="0%" y2="100%">
