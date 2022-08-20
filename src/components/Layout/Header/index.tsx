@@ -2,12 +2,12 @@ import type { NextPage } from "next";
 import Link from "next/link";
 import { HEADER_ROUTES } from "@/common/constants/header";
 import styles from "@/styles/Components/Header.module.scss";
-import MainLogo from "@/icons/logo.svg";
+import Logo from "@/icons/logo.svg";
 
 const Header: NextPage = () => {
   return (
     <header className={styles.header}>
-      <MainLogo />
+      <Logo />
       <div className={styles.menu}>
         {HEADER_ROUTES.map((header: any) => {
           return (
