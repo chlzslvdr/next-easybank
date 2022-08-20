@@ -24,6 +24,7 @@
     display: flex;
     width: 180px;
     justify-content: space-between;
+    cursor: pointer;
   }
 
   .menu {
@@ -41,6 +42,11 @@
     color: $white;
     margin-bottom: 10px;
     font-size: 14px;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-primary-lgreen;
+    }
   }
 
   .copyright {
@@ -52,6 +58,7 @@
   }
 
   .copyright .button {
+    cursor: pointer;
     height: 50px;
     width: 165px;
     border-radius: 50px;
@@ -64,6 +71,15 @@
     color: $white;
     font-size: 14px;
     font-weight: bold;
+
+    &:hover {
+      background-image: linear-gradient(
+        to right,
+        hsl(136deg 65% 51% / 55%),
+        hsl(192deg 70% 51% / 70%)
+      );
+      transition: 0.7s;
+    }
   }
 
   .copyright .label {

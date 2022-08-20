@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import Link from "next/link";
+import ActiveLink from "@/components/ActiveLink";
 import { HEADER_ROUTES } from "@/common/constants/header";
 import styles from "@/styles/Components/Header.module.scss";
 import Logo from "@/icons/logo.svg";
@@ -11,9 +11,13 @@ const Header: NextPage = () => {
       <div className={styles.menu}>
         {HEADER_ROUTES.map((header: any) => {
           return (
-            <Link key={header.label} href={header.path}>
+            <ActiveLink
+              key={header.label}
+              href={header.path}
+              activeClassName={styles.activeLink}
+            >
               <a className={styles.link}>{header.label}</a>
-            </Link>
+            </ActiveLink>
           );
         })}
       </div>
