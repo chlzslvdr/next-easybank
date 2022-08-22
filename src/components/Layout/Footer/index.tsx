@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import styles from "@/styles/Components/Footer.module.scss";
+import styles from "@/styles/components/Layout/Footer.module.scss";
 import WhiteLogo from "@/icons/logo-white.svg";
 import FACEBOOK_LOGO from "@/icons/icon-facebook.svg";
 import YOUTUBE_LOGO from "@/icons/icon-youtube.svg";

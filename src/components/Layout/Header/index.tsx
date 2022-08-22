@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import ActiveLink from "@/components/ActiveLink";
 import { HEADER_ROUTES } from "@/common/constants/header";
-import styles from "@/styles/Components/Header.module.scss";
+import styles from "@/styles/components/Layout/Header.module.scss";
 import Logo from "@/icons/logo.svg";
 
 const Header: NextPage = () => {

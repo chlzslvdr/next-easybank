@@ -1,0 +1,42 @@
+@import "@/styles/variables.module.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 26rem;
+  height: 40rem;
+  background-color: $white;
+
+  .image {
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+
+  .articleInfo {
+    padding: 2.5rem;
+  }
+
+  .articleInfo .author {
+    font-size: $font-10;
+    color: $color-neutral-gblue;
+    @include _spacer-xs;
+  }
+
+  .articleInfo .title {
+    cursor: pointer;
+    font-size: $font-18;
+    color: $color-primary-dblue;
+    @include _spacer-xs;
+
+    &:hover {
+      color: $color-primary-lgreen;
+      transition: 0.7s;
+    }
+  }
+
+  .articleInfo .excerpt {
+    font-size: $font-12;
+    font-weight: 300;
+    color: $color-neutral-gblue;
+  }
+}

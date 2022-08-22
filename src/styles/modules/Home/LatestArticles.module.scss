@@ -1,0 +1,18 @@
+@import "@/styles/variables.module.scss";
+
+.container {
+  background-color: $color-neutral-vlgray;
+  display: block;
+  padding: 8rem 16.5rem;
+
+  .title {
+    font-size: 3rem;
+    color: $color-primary-dblue;
+    @include _spacer-xl;
+  }
+
+  .card {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
