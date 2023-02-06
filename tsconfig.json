@@ -2,11 +2,10 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
+      "@/common/*": ["common/*"],
       "@/components/*": ["components/*"],
       "@/modules/*": ["modules/*"],
-      "@/styles/*": ["styles/*"],
-      "@/pages/*": ["pages/*"],
-      "@/common/*": ["common/*"]
+      "@/styles/*": ["styles/*"]
     },
     "target": "es6",
     "lib": ["dom", "dom.iterable", "esnext"],
