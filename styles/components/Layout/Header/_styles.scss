@@ -1,0 +1,52 @@
+.header-container {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  z-index: 99;
+  top: 0;
+  height: 6rem;
+
+  -webkit-box-shadow: 0rem 0.3rem 0.6rem 0rem rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0rem 0.3rem 0.6rem 0rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0rem 0.3rem 0.6rem 0rem rgba(0, 0, 0, 0.1);
+  background-color: $white;
+
+  @include respond(desktop) {
+    height: 9rem;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $white;
+    width: 100%;
+    max-width: 150rem;
+    padding: 0 1.6rem;
+
+    @include respond(desktop) {
+      padding: 0 min(6rem, 6vw);
+    }
+  }
+
+  .header-logo {
+    margin-right: 4rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 7.258rem;
+    height: 3.913rem;
+
+    @include respond(desktop) {
+      width: 14rem;
+      height: 5rem;
+    }
+  }
+
+  @import './HeaderDesktopMenu/styles';
+  @import './HeaderMobileMenu/styles';
+}

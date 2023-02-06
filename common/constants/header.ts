@@ -5,18 +5,18 @@ export const HEADER_ROUTES = [
   },
   {
     label: 'About',
-    path: '/about',
+    path: '/',
   },
   {
     label: 'Contact',
-    path: '/contact',
+    path: '/',
   },
   {
     label: 'Blog',
-    path: '/blog',
+    path: '/',
   },
   {
     label: 'Careers',
-    path: '/careers',
+    path: '/',
   },
 ];

@@ -1,0 +1,19 @@
+.nav-link {
+  text-decoration: none;
+
+  .nav-link-content {
+    color: red;
+    text-decoration: none;
+  }
+
+  .nav-link-content.active,
+  .nav-link-content:hover,
+  .nav-link-content:focus {
+    color: $color-neutral-gblue;
+    font-weight: 400;
+  }
+
+  &.active {
+    pointer-events: none;
+  }
+}

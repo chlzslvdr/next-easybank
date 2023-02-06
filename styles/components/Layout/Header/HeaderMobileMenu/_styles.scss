@@ -1,0 +1,198 @@
+.header-mobile-menu {
+  display: block;
+
+  @include respond(desktop) {
+    display: none;
+  }
+}
+
+.header-mobile-menu .hamburger-menu-container {
+  .toggler {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 4;
+    cursor: pointer;
+    width: 3.3rem;
+    height: 4rem;
+    opacity: 0;
+  }
+
+  .hamburger-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1.8rem;
+    z-index: 3;
+    width: 1.7rem;
+    height: 4rem;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Hamburger line */
+  .hamburger-icon > div {
+    position: relative;
+    width: 100%;
+    height: 0.1rem;
+    border-bottom: 0.2rem solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+  }
+
+  .hamburger-icon > div:before,
+  .hamburger-icon > div:after {
+    content: '';
+    position: absolute;
+    border-bottom: 0.2rem solid #333;
+    top: -0.5rem;
+    width: 100%;
+    background: inherit;
+    transition: all 0.4s ease;
+  }
+
+  /* Moves line down */
+  .hamburger-icon > div:after {
+    top: 0.5rem;
+  }
+
+  /* Toggler Animation */
+  .toggler:checked + .hamburger-icon > div {
+    border-bottom: 0.2rem solid transparent;
+  }
+
+  /* Turns Lines Into X */
+  .toggler:checked + .hamburger-icon > div:before {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+  .toggler:checked + .hamburger-icon > div:after {
+    top: 0;
+    right: 0;
+    transform: rotate(45deg);
+  }
+
+  /* Show Menu */
+  .toggler:checked ~ .menu {
+    visibility: visible;
+  }
+
+  .toggler:checked ~ .menu > .menu-flex-container {
+    opacity: 1;
+  }
+
+  /* ----------- */
+
+  .menu {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu > .menu-flex-container {
+    margin: 0 2rem;
+    width: 200vw;
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+    flex: none;
+    background: $white;
+    text-align: center;
+    max-width: 100vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: 0.1s ease;
+    padding: 0 2rem;
+  }
+
+  .menu-logo-container {
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: -0.4rem;
+  }
+
+  .menu-logo {
+    width: 13.258rem;
+    height: 0.913rem;
+    @include respond(desktop) {
+      width: 8rem;
+      height: 4.313rem;
+    }
+  }
+
+  .menu > .menu-flex-container > ul {
+    overflow-y: scroll;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 2.6rem;
+    min-height: 7rem;
+    max-height: fit-content;
+
+    &::-webkit-scrollbar {
+      width: 0rem;
+      background: transparent; /* make scrollbar transparent */
+    }
+  }
+
+  .menu > .menu-flex-container > ul > li {
+    list-style: none;
+    color: $black;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+
+    &:first-child {
+      margin-top: 2.5rem;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .menu > .menu-flex-container > ul > li > a {
+    text-decoration: none;
+    transition: color 0.1s ease;
+  }
+
+  .menu-button {
+    background-color: transparent;
+    cursor: pointer;
+
+    font-weight: bold;
+    font-size: 1.6rem;
+    padding: 1rem 1.3rem;
+
+    // color: blue;
+    // border: blue solid 0.1rem;
+    border-radius: 0.4rem;
+
+    &:hover,
+    &:focus {
+      // background-color: blue;
+      color: $white;
+    }
+  }
+
+  .active .menu-button {
+    // background-color: blue;
+    color: $white;
+  }
+
+  .menu-sub-item {
+    margin-left: 2rem;
+  }
+}
